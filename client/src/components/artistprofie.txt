@@ -1,0 +1,49 @@
+
+
+Let's break down this React component, ArtistProfile, step by step:
+
+1. Import Statements
+import React, { useState } from 'react';
+
+
+What it does: This imports React from the React library, which is essential for building React components.
+ It also imports useState, which is a React hook used to manage the state of the component (i.e., values that can change over time).
+
+ ------------------------------------------------------------------------------------------
+
+2. Component Declaration
+
+const ArtistProfile = ({ user, onProfileSubmit, onPhotoChange }) => 
+
+
+What it does: This defines a functional component called ArtistProfile. The component receives three props:
+user: The current user’s data (like username, email, etc.).
+onProfileSubmit: A function to handle the submission of the profile updates (passed from the parent component).
+onPhotoChange: A function to notify the parent component about the profile photo change (passed from the parent component).
+
+-------------------------------------------------------------------------------------------
+3. State Variables
+
+const [username, setUsername] = useState(user?.username || '');
+const [email, setEmail] = useState(user?.email || '');
+const [password, setPassword] = useState(user?.password || '');
+const [newPassword, setNewPassword] = useState('');
+const [showPasswordField, setShowPasswordField] = useState(false);
+const [errorMessage, setErrorMessage] = useState('');
+const [profilePhoto, setProfilePhoto] = useState(null);
+const [imageUrl, setImageUrl] = useState('');
+
+
+
+What it does: This block initializes state variables using the useState hook.
+
+username, email, and password: These hold the user's profile information (fetched from user prop). 
+user?.attributes ==> it is way of getting the attributes values of a data send using props by parent component to this component.
+
+newPassword: A state to store the new password (if the user decides to change it).
+
+showPasswordField: A boolean state to control whether the password input field should be shown or not (used for toggling password change).
+
+errorMessage: A state for storing error messages, like if the image upload fails.
+
+profilePhoto and imageUrl: These hold the URL of the uploaded profile photo (used to display and update the user's profile image).

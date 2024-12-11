@@ -1,0 +1,86 @@
+
+    
+.visitor-home{
+
+    background-image: url('../assets/images/lavdimg.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the image fixed during scrolling */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Ensures that all elements inside align correctly */
+}
+.visitor-nav{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px 60px;
+    z-index: 100;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+  
+  }
+  
+  /* Logo styling */
+  .visitor-nav h1 {
+    color: #c20000;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Aclonica', sans-serif;
+  }
+
+
+/* Active link in the sidebar */
+.dashboard ul li.active a {
+    background-color: #a31d2f;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.dashboard ul li a:hover {
+    background-color: #a31d2f;
+    color: #fff;
+    border-radius: 10px;
+}
+
+/* Active section styling */
+.section.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.fab-sign-out:hover {
+    background-color: #b22222; /* Red on hover */
+}
+
+/* Dashboard navigation enhancements */
+.dashboard ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.dashboard ul li a span {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.dashboard ul li.active a {
+    background-color: #a31d2f;
+    border-radius: 8px;
+}
