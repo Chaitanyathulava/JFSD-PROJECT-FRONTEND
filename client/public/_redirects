@@ -1,0 +1,5 @@
+# Serve static assets normally
+/assets/*    /assets/:splat   200
+
+# Redirect all React Router routes to index.html
+/*    /index.html   200
